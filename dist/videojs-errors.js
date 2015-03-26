@@ -136,9 +136,10 @@
 
     // PLAYER_ERR_NO_SRC
     player.on('play', function() {
-      if (player.currentSrc() === null ||
-          player.currentSrc() === undefined ||
-          player.currentSrc() === '') {
+      if(!(player.mediainfo && player.mediainfo.id) &&
+        (player.currentSrc() === null ||
+        player.currentSrc() === undefined ||
+        player.currentSrc() === '')) {
         player.error({
           code: -1,
           type: 'PLAYER_ERR_NO_SRC'
