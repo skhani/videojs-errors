@@ -28,6 +28,14 @@ module.exports = function(grunt) {
         }
       }
     },
+    copy: {
+      css: {
+        expand: true,
+        flatten: true,
+        src: ['src/*.css'],
+        dest: 'dist/'
+      }
+    },
     uglify: {
       options: {
         banner: '<%= banner %>'
@@ -91,6 +99,7 @@ module.exports = function(grunt) {
                       'qunit']);
   grunt.registerTask('default',
                      ['test',
+                      'copy',
                       'vjslanguages',
                       'concat',
                       'uglify']);

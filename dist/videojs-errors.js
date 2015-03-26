@@ -1,5 +1,5 @@
-/*! videojs-errors - v0.1.6 - 2014-09-23
-* Copyright (c) 2014 Brightcove; Licensed Apache-2.0 */
+/*! videojs-errors - v0.1.7 - 2015-03-26
+* Copyright (c) 2015 Brightcove; Licensed Apache-2.0 */
  (function(){
   var
     defaults = {
